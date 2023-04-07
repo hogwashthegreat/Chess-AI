@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "ChessAI",
+    "short_name": "ChessAI",
+    "version": "1.0",
+    "description": "Implements a chess engine",
+    "author": "Troy Merritt",
+    "homepage_url": "https://www.chess.com",
+    "icons": {
+      "16": "images/image16.png",
+      "24": "images/image24.png",
+      "32": "images/image32.png",
+      "48": "images/image48.png",
+      "96": "images/image96.png",
+      "128": "images/image128.png"
+    },
+    "minimum_chrome_version": "103",
+    "offline_enabled": true,
+    "permissions": [ "activeTab" ]
+  }
