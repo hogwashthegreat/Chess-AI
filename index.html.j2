@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{%block title%}
+Login
+{%endblock%}
+{% block body %} 
+<div class="header">
+  <a href="#default" class="logo">Extengine</a>
+  <div class="header-right">
+    <a class="active" href="."> Login </a>
+    <a href="signup"> Sign Up </a>
+  </div>
+</div>
+<div id = "container">
+    {% if error == 1%}
+    <h3>Login failed - Incorrect Username or Password- Try Again</h3>
+    {% else %}
+    <h3>Login</h3>
+    {% endif %}
+    <form method = "POST" action = "userpage">
+    <div class = "test">
+        <label for="username">Enter your username: </label>
+        <input type="text" id="username" name="username" autocomplete="off" required>
+    </div>
+    <div class = "test">
+        <label for="pw">Password: </label>
+        <input type="password" id="pw" name="pw" autocomplete="off" required>
+    </div>
+    <div id ="submit">
+    <input type ="submit" value="Login">
+    </div>
+    </form>
+    </div>
+
+    
+{% endblock %}
