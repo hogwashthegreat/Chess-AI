@@ -3,6 +3,12 @@ import chess.engine
 import random
 
 
+def best_move(board,_depth=10):
+    engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
+    result = engine.play(board, chess.engine.Limit(depth=_depth))
+    print(board.fen)
+    return result
+
 def stockfish_evaluation(board, depth_=10):
         engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
         result = engine.analyse(board, chess.engine.Limit(depth=depth_))
