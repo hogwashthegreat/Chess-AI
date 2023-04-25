@@ -1,0 +1,242 @@
+html, body {
+    width: 354px;
+    height: 470px;
+    overflow: hidden;
+    background-color: rgb(240, 240, 240);
+    color: #666666;
+    font: 20px 'Roboto', sans-serif;
+    line-height: 35px;
+    text-decoration: none;
+    text-overflow: clip;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#board {
+    width: 350px !important;
+    background: none !important;
+    margin-left: 5px;
+}
+
+#board .board-b72b1 {
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    border: none;
+}
+
+#board .notation-322f9 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+#board .numeric-fc462 {
+    top: -11px;
+    left: 2px;
+}
+
+#board .alpha-d2270 {
+    bottom: -11px;
+    right: 2px;
+}
+
+#board.brown .white-1e1d7 {
+    background-color: #efdab5;
+    color: #b58863;
+}
+
+#board.brown .black-3c85d {
+    background-color: #b58863;
+    color: #efdab5;
+}
+
+#board.green .white-1e1d7 {
+    background-color: #eeedd2;
+    color: #759656;
+}
+
+#board.green .black-3c85d {
+    background-color: #759656;
+    color: #eeedd2;
+}
+
+#board.blue .white-1e1d7 {
+    background-color: #eae9d2;
+    color: #4a7399;
+}
+
+#board.blue .black-3c85d {
+    background-color: #4a7399;
+    color: #eae9d2;
+}
+
+#board.grey .white-1e1d7 {
+    background-color: #dcdcdc;
+    color: #ababab;
+}
+
+#board.grey .black-3c85d {
+    background-color: #ababab;
+    color: #dcdcdc;
+}
+
+#board.orange .white-1e1d7 {
+    background-color: #fce4b2;
+    color: #cf8b19;
+}
+
+#board.orange .black-3c85d {
+    background-color: #cf8b19;
+    color: #fce4b2;
+}
+
+#board.purple .white-1e1d7 {
+    background-color: #efefef;
+    color: #8877b7;
+}
+
+#board.purple .black-3c85d {
+    background-color: #8877b7;
+    color: #efefef;
+}
+
+#board.red .white-1e1d7 {
+    background-color: #f0d9bf;
+    color: #b95646;
+}
+
+#board.red .black-3c85d {
+    background-color: #b95646;
+    color: #f0d9bf;
+}
+
+#board.tan .white-1e1d7 {
+    background-color: #edc8a2;
+    color: #d3a36a;
+}
+
+#board.tan .black-3c85d {
+    background-color: #d3a36a;
+    color: #edc8a2;
+}
+
+#board.sky .white-1e1d7 {
+    background-color: #efefef;
+    color: #c2d6e2;
+}
+
+#board.sky .black-3c85d {
+    background-color: #c2d6e2;
+    color: #efefef;
+}
+
+#board._8-bit .white-1e1d7 {
+    background-color: #eef0ee;
+    color: #6a9b41;
+}
+
+#board._8-bit .black-3c85d {
+    background-color: #6a9b41;
+    color: #eef0ee;
+}
+
+#board.wood .board-b72b1 {
+    background-image: url("/res/chessboards/wood.jpeg");
+    background-size: contain;
+}
+
+#board.marble .board-b72b1 {
+    background-image: url("/res/chessboards/marble.jpeg");
+    background-size: contain;
+}
+
+#board.newspaper .board-b72b1 {
+    background-image: url("/res/chessboards/newspaper.jpeg");
+    background-size: contain;
+}
+
+#board.wood .white-1e1d7 {
+    background-color: transparent;
+    color: black;
+}
+
+#board.wood .black-3c85d {
+    background-color: transparent;
+    color: white;
+}
+
+#board.marble .white-1e1d7 {
+    background-color: transparent;
+    color: black;
+}
+
+#board.marble .black-3c85d {
+    background-color: transparent;
+    color: white;
+}
+
+#board.newspaper .white-1e1d7 {
+    background-color: transparent;
+    color: black;
+}
+
+#board.newspaper .black-3c85d {
+    background-color: transparent;
+    color: white;
+}
+
+#move-arrow {
+    position: absolute;
+    z-index: 51;
+    opacity: 0.4;
+    top: 26px
+}
+
+#response-arrow {
+    position: absolute;
+    z-index: 50;
+    opacity: 0.4;
+    top: 26px
+}
+
+#moves {
+    width: 350px;
+    height: 45px;
+    font: 16px 'Roboto', sans-serif;
+    line-height: 22px;
+    z-index: 5;
+    margin: 10px 0 0 0;
+}
+
+#evaluation {
+    width: 350px;
+    height: 22px;
+    font: 16px 'Roboto', sans-serif;
+    line-height: 22px;
+    z-index: 5;
+    margin: 15px 0 0 0;
+}
+
+#game-detection {
+    width: 350px;
+    height: 20px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font: 14px 'Roboto', sans-serif;
+    line-height: 18px;
+    text-align: center;
+}
+
+#config {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#analyze {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.material-tooltip {
+    top: 429px !important;
+}
