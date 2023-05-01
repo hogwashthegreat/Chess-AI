@@ -2,13 +2,14 @@ import chess
 import chess.engine
 import random
 
-
-def best_move(board,_depth=10):
+#find best move according to stockfish
+def best_move(board,depth_=10):
     engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
-    result = engine.play(board, chess.engine.Limit(depth=_depth))
+    result = engine.play(board, chess.engine.Limit(depth=depth_))
     print(board.fen)
     return result
 
+#find stockfish evaluation
 def stockfish_evaluation(board, depth_=10):
         engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
         result = engine.analyse(board, chess.engine.Limit(depth=depth_))
@@ -20,6 +21,7 @@ def stockfish_evaluation(board, depth_=10):
         print(result["score"].white().score())
         return result["score"].white().score()/100
 
+#generate random board as a python-chess library board
 def random_board(max_depth=200):
         board = chess.Board()
         depth = random.randrange(1, max_depth)
