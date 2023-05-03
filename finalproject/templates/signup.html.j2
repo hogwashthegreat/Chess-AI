@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{%block title%}
+Sign Up
+{%endblock%}
+{% block body %} 
+<div class="header">
+  <a href="#default" class="logo">SportZone</a>
+  <div class="header-right">
+    <a class="active" href="."> Login </a>
+    <a href="signup">Sign Up</a>
+  </div>
+</div>
+<div id = "container">
+    <h3>Create Account</h3>
+    <form method = "GET" action = "results">
+    <div class = "test">
+        <label for="username">Enter your username: </label>
+        <input type="text" id="username" name="username" autocomplete = "off" required minlength=6>
+    </div>
+    <div class = "test">
+        <label for="pw">Password: </label>
+        <input type="password" id="pw" name="pw" autocomplete = "off" required minlength=8>
+    </div>
+    <div id ="submit">
+    <input type ="submit" value="Create Account">
+    </div>
+    </form>
+    </div>
+
+    {% endblock %}

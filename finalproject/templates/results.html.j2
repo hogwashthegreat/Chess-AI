@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+{%block title%}
+Account Confirmation
+{%endblock%}
+{% block body %} 
+<div class="header">
+  <a href="#default" class="logo">SportZone</a>
+  <div class="header-right">
+    <a class="active" href=".">Log In</a>
+    <a href="signup">Sign Up</a>
+  </div>
+</div>
+<div id = "container">
+    {% if username|length < 6 or password|length < 8%}
+        <h3>Your Account Creation Failed - Invalid Input</h3>
+    {% elif failure == 1 %}
+        <h3>Your Account Creation Failed - Username is Taken</h3>
+    {% else %}
+        <h3>Your Account has Successfully Been Created</h3>
+     {% endif %}
+    </div>
+   
+    
+{% endblock %}
