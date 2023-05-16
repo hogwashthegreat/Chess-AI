@@ -11,7 +11,6 @@ def fen_to_board(fen):
 def best_move(board,depth_=10):
     engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
     result = engine.play(board, chess.engine.Limit(depth=depth_))
-    print(board.fen)
     return result
 
 #find stockfish evaluation
@@ -19,11 +18,8 @@ def stockfish_evaluation(board, depth_=10):
         engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
         result = engine.analyse(board, chess.engine.Limit(depth=depth_))
         if result["score"].is_mate():
-            print("mate")
             print(result["score"].white().mate())
             return result["score"].white().mate()
-        print(board.fen)
-        print(result["score"].white().score())
         return result["score"].white().score()/100
 
 #generate random board as a python-chess library board
