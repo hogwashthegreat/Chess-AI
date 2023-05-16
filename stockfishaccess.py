@@ -2,6 +2,11 @@ import chess
 import chess.engine
 import random
 
+#return a python-chess board from a fen string
+def fen_to_board(fen):
+    board = chess.Board(fen)
+    return board
+
 #find best move according to stockfish
 def best_move(board,depth_=10):
     engine = chess.engine.SimpleEngine.popen_uci("stockfish\stockfish_15.1_win_x64_avx2\stockfish-windows-2022-x86-64-avx2.exe")
