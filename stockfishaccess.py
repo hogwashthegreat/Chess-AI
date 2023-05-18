@@ -34,3 +34,8 @@ def random_board(max_depth=200):
             if board.is_game_over():
                 break
         return board
+
+#return best move, takes fen string and depth for stockfish
+def best_move_from_fen(fen,depth):
+    board = fen_to_board(fen)
+    return best_move(board,depth)
