@@ -20,7 +20,7 @@ def stockfish_evaluation(board, depth_=10):
         if result["score"].is_mate():
             print(result["score"].white().mate())
             return result["score"].white().mate()
-        return result["score"].white().score()/100
+        return result["score"].white().score()
 
 #generate random board as a python-chess library board
 def random_board(max_depth=200):
@@ -39,3 +39,8 @@ def random_board(max_depth=200):
 def best_move_from_fen(fen,depth):
     board = fen_to_board(fen)
     return best_move(board,depth)
+
+#return eval from fen string
+def eval_from_fen(fen,depth):
+    board = fen_to_board(fen)
+    return stockfish_evaluation(board,depth)
